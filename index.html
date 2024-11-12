@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment</title>
+    <style>
+        /* Custom half-blue background for the body */
+        .half-blue-background {
+          background: linear-gradient(to bottom, #7b13b8 50%, #dbd6d6 50%);
+          /* #3b82f6 is Tailwind's blue-500 color */
+        }
+        /* .half-smoke{
+            background: linear-gradient(to top, half-smoke 50%,);
+        } */
+      </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class=" flex justify-center items-center ">
+    <div
+      id="assignment"
+      class="p-8 half-blue-background min-h-screen shadow-lg rounded-lg max-w-4xl mx-4"
+    >
+      <h2 class="text-2xl font-bold text-white-800 text-left mb-6">
+        OUR SERVICES 
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Emergency Plumbing Services Card -->
+        <div
+          class="service-card group p-6 bg-white rounded-lg shadow-md transform transition duration-500 hover:rotate-180"
+        >
+          <div class="text-center mb-4">
+            <img
+              src="img1.jpg"
+              alt="Emergency Icon"
+              class="mx-auto w-12 h-12 mb-2"
+            />
+            <h3 class="text-lg font-semibold">Emergency Plumbing Services</h3>
+          </div>
+          <p class="text-sm text-gray-600 mb-4">
+            Our plumbers are ready to go 24/7 for emergencies - including
+            nights, weekends, and holidays.
+          </p>
+          <a href="#" class="text-purple-600 font-semibold"
+            >Explore This Service ></a
+          >
+        </div>
+
+        <!-- Plumbing and Drains Card -->
+        <div
+          class="service-card group p-6 bg-white rounded-lg shadow-md transform transition duration-500 hover:rotate-180"
+        >
+          <div class="text-center mb-4">
+            <img
+              src="img2.png"
+              alt="Plumbing Icon"
+              class="mx-auto w-12 h-12 mb-2"
+            />
+            <h3 class="text-lg font-semibold">Plumbing and Drains</h3>
+          </div>
+          <p class="text-sm text-gray-600 mb-4">
+            As the largest plumbing and drain service company, we make thousands
+            of repairs every day.
+          </p>
+          <a href="#" class="text-purple-600 font-semibold"
+            >Explore This Service ></a
+          >
+        </div>
+
+        <!-- Water Damage Card -->
+        <div
+          class="service-card group p-6 bg-white rounded-lg shadow-md transform transition duration-500 hover:rotate-180"
+        >
+          <div class="text-center mb-4">
+            <img
+              src="img3.png"
+              alt="Water Icon"
+              class="mx-auto w-12 h-12 mb-2"
+            />
+            <h3 class="text-lg font-semibold">Water Damage</h3>
+          </div>
+          <p class="text-sm text-gray-600 mb-4">
+            Our teams are equipped with state-of-the-art water extraction and
+            cleanup equipment.
+          </p>
+          <a href="#" class="text-purple-600 font-semibold"
+            >Explore This Service ></a
+          >
+        </div>
+
+        <!-- Water Heaters Card -->
+        <div
+          class="service-card group p-6 bg-white rounded-lg shadow-md transform transition duration-500 hover:rotate-180"
+        >
+          <div class="text-center mb-4">
+            <img
+              src="img4.webp"
+              alt="Heater Icon"
+              class="mx-auto w-12 h-12 mb-2"
+            />
+            <h3 class="text-lg font-semibold">Water Heaters</h3>
+          </div>
+          <p class="text-sm text-gray-600 mb-4">
+            Trust Roto-Rooter for repair and replacement of gas, electric, and
+            tankless water heaters.
+          </p>
+          <a href="#" class="text-purple-600 font-semibold"
+            >Explore This Service ></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script>
+      // Rotate animation on hover using GSAP
+      document.querySelectorAll(".service-card").forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+          gsap.to(card, { rotationY: 360, duration: 1 });
+        });
+        card.addEventListener("mouseleave", () => {
+          gsap.to(card, { rotationY: 0, duration: 1 });
+        });
+      });
+    </script>
+  </body>
+</html>
